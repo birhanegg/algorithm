@@ -1,0 +1,14 @@
+The Greedy Strategy is not working always. 
+
+For example if there a set and k value like the following : 
+S = {1,2,3,4,5}
+T ={}
+k = 11 
+
+So according to Greedy Strategy : 
+
+1 < 11 => T = {1}
+1 + 2  = 3 < 11 => T = {1 , 2}
+1 + 2 + 3 = 6 < 11 => T = {1, 2, 3}
+1 + 2 + 3 + 4 = 10 < 11 => T {1, 2, 3, 4}
+1 + 2 + 3 + 4 + 5 = 15 > 11 => 5 will be skipped => The Strategy become a reason for omission of wrong record.
