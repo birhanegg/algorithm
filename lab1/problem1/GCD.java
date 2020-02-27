@@ -8,6 +8,16 @@ public class GCD {
 		return gcd(n, m % n);
 	}
 
+        static int gcd_iteration(int number1, int number2) {
+		int result = 1;
+		int smaller = number2 > number1 ? number1 : number2;
+		for (int i = 2; i <= smaller / 2; i++) {
+			if (number2 % i == 0 && number1 % i == 0)
+				result = i;
+		}
+		return result;
+	}
+
 	public static void main(String[] args) {
 
 		System.out.println(gcd(12, 18));
