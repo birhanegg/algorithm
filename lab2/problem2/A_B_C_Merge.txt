@@ -1,0 +1,31 @@
+ A: The pseudocode for the merging algorith  
+   Algorithm: merge(A1, A2)
+   Input : two sorted arrays A1 and A2 
+   Output: one merged and sorted array A
+	
+	A1index <--0
+	A2index <--0
+	pos <--0
+	create an array  A  of size A1.length + A2.length
+	
+	while A1index < arr1.length and A2index < arr2.length do 
+		if arr1[A1index] <= arr2[j] then 
+			A[pos++]<-- A1[A1index++];
+		else 
+			A[pos++]<-- A2[A2index];
+			
+	while i < arr1.length do
+		A[pos++]<-- A1[A1index++];
+	}
+
+	while j < arr2.length do
+		A[pos++]<-- A2[A2index++];
+	}
+
+	return A;
+
+
+ B: asymptotic running time of this algorithm is
+	 3 + 5+ 2n + 3n + 3n + n + n + 1 = 10n +9 ==> O(n)
+	 
+ C: Implementation :  separate file, Merge.java
